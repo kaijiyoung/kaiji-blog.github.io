@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="83px" viewBox="0 0 53 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_size_5_selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/快件规格/超大包装_selected">
+            <g id="icon_size_5_selected">
+                <rect id="Rectangle-5" fill="#333333" x="0" y="0" width="53" height="83" rx="4"></rect>
+                <polygon id="Stroke-3" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="50 13.5 39 3 14 3 3 13.5 3 80 50 80"></polygon>
+                <path d="M43.2,13.5 L32.2,3" id="Stroke-3-Copy" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M20.8,3 L9.8,13.5" id="Stroke-3-Copy-2" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                <rect id="Rectangle-28-Copy-3" fill="#FFFFFF" x="9" y="13" width="1.6" height="67" rx="0.8"></rect>
+                <rect id="Rectangle-28-Copy-4" fill="#FFFFFF" x="42.4" y="13" width="1.6" height="67" rx="0.8"></rect>
+                <rect id="Rectangle" fill="#FFFFFF" fill-rule="nonzero" x="3" y="19.8" width="47" height="1.6"></rect>
+                <rect id="Rectangle-Copy-4" fill="#FFFFFF" fill-rule="nonzero" x="3" y="13" width="47" height="1.6"></rect>
+                <rect id="Rectangle-Copy-2" fill="#FFFFFF" fill-rule="nonzero" x="3" y="42.7" width="47" height="1.6"></rect>
+                <rect id="Rectangle-Copy-3" fill="#FFFFFF" fill-rule="nonzero" x="3" y="49.5" width="47" height="1.6"></rect>
+                <rect id="Rectangle-Copy" fill="#FFFFFF" fill-rule="nonzero" x="3" y="72.4" width="47" height="1.6"></rect>
+                <polygon id="Rectangle-Copy-5" fill="#FFFFFF" fill-rule="nonzero" transform="translate(25.312569, 30.711381) rotate(-33.000000) translate(-25.312569, -30.711381) " points="6.86678465 29.9113813 43.758353 29.9113813 43.758353 31.5113813 6.86678465 31.5113813"></polygon>
+                <polygon id="Rectangle-Copy-6" fill="#FFFFFF" fill-rule="nonzero" transform="translate(27.705648, 33.417231) rotate(-33.000000) translate(-27.705648, -33.417231) " points="9.25986335 32.6172305 46.1514317 32.6172305 46.1514317 34.2172305 9.25986335 34.2172305"></polygon>
+                <polygon id="Rectangle-Copy-8" fill="#FFFFFF" fill-rule="nonzero" transform="translate(27.605648, 60.217231) scale(1, -1) rotate(-33.000000) translate(-27.605648, -60.217231) " points="9.15986335 59.4172305 46.0514317 59.4172305 46.0514317 61.0172305 9.15986335 61.0172305"></polygon>
+                <polygon id="Rectangle-Copy-7" fill="#FFFFFF" fill-rule="nonzero" transform="translate(25.205648, 63.117231) scale(1, -1) rotate(-33.000000) translate(-25.205648, -63.117231) " points="6.75986335 62.3172305 43.6514317 62.3172305 43.6514317 63.9172305 6.75986335 63.9172305"></polygon>
+            </g>
+        </g>
+    </g>
+</svg>

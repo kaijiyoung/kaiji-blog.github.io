@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>svgtest</title>
+    <style>
+        body{
+            background: darkgray;
+        }
+        .icon1{
+            width:100px;
+            height:100px;
+        }
+        .bg-svg{
+            display: inline-block;
+            width:24px;
+            height:24px;
+            background-size: 100% 100%
+        }
+    </style>
+</head>
+<body>
+    <svg class="icon1" title="折叠">
+        <use xlink:href="icon_sprite.svg#icon1"></use>
+    </svg>
+    <script>
+        var title = document.createElement('h1')
+            title.innerHTML = 'img方式引入'
+            document.body.appendChild(title)
+        for(var i = 1; i <= 77; i++) {
+            var img = document.createElement('img')
+            img.src = 'svg_icon/'+i+'.svg'
+            img.className = 'icon'+i
+            document.body.appendChild(img)
+        }
+        var title2 = document.createElement('h1')
+            title2.innerHTML = 'background背景图方式引入'
+            document.body.appendChild(title2)
+        for(var i = 1; i <= 77; i++) {
+            var img = document.createElement('div')
+            img.setAttribute('style','background-image: url(svg_icon/'+i+'.svg)')
+            img.className = 'bg-svg bg-icon'+i
+            document.body.appendChild(img)
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,395 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>个人作品</title>
+    <meta name="description" content="谢慧玲的个人作品">
+    <link rel="stylesheet" type="text/css" href="https://js.ibaotu.com/revision/css/base/public_v33.css?v=201809029">
+    <link rel="stylesheet" type="text/css" href="https://js.ibaotu.com/revision/css/base/reset.css">
+    <link rel="stylesheet" type="text/css" href="index.css">
+    <style>
+        .scrollLoading{
+            background: none;
+            width: 100%;
+        }
+        .bt-body .bt-list li:hover .img-outer.heigher{
+            transform: translateY(-100%);
+            transition: 3s linear;
+        }
+        .img-outer{
+            position: absolute;
+            height: 100%;
+            z-index: 1;
+            transition: 0.5s linear;
+        }
+        .pb-nav{
+            background: white;
+        }
+        /* .pb-nav .nav-item:first-child > a{
+            padding-right:0;
+        } */
+        .magnify-footer .magnify-toolbar{
+            transition: 1.5s 1s;
+            transform: translateY(100px);
+        }
+        .magnify-footer:hover .magnify-toolbar{
+            transition: 0.5s 0s;
+            transform: translateY(0);
+        }
+        .pb-nav .nav-item:last-child > a {
+            position: relative;
+            top: 0;
+            font-size: inherit;
+            /* padding-right: 0; */
+            /* padding-left: 0; */
+        }
+        .bg-blur{
+            position: absolute;
+            width:100%;
+            height:100%;
+            top:0;
+            left:0;
+            right: 0;
+            bottom: 0;
+            -webkit-filter: blur(200px);
+            filter: blur(200px);
+            z-index: -1;
+        }
+    </style>
+<body>
+    <!--内容-->
+    <div class="bt-body classify">
+        <div class="pb-nav">
+            <!-- 顶部导航条 -->
+            <div class="nav-wrap">
+                <nav class="nav">
+                    <ul class="clearfix">
+                        <li class="nav-item" data-type="kaiji"><a href="javascript:;" class="active" data-spot="首页">首页</a></li>
+                        <li class="nav-item" data-type="app"><a href="javascript:;" data-spot="随医APP">随医APP</a></li>
+                        <li class="nav-item" data-type="dians"><a href="javascript:;" data-spot="电商APP">电商APP</a></li>
+                        <li class="nav-item" data-type="yiliao"><a href="javascript:;" data-spot="医疗专题">医疗专题</a></li>
+                        <!-- <li class="nav-item left-two" data-type="app"><a href="javascript:;" data-spot="广告设计">广告设计</a>
+                            <div class="nav-hover-banner">
+                                <div class="hover-classify-one">
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">海报</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">画册封面</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">展板</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">宣传单|折页</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">证书</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">名片|vip卡</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">节日设计</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">画册整套</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">背景</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">元素</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">包装</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">2018狗年设计</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item-diff" href="javascript:;"
+                                        >更多&gt;&gt;</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="javascript:;" data-spot="UI设计">UI设计</a>
+                            <div class="nav-hover-banner">
+                                <div class="opacity-block"></div>
+                                <div class="hover-classify-one">
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">icon图标</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">移动应用界面</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">网页界面</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item-diff" href="javascript:;"
+                                        >更多&gt;&gt;</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item left-two"><a href="javascript:;" data-spot="电商淘宝">电商淘宝</a>
+                            <div class="nav-hover-banner">
+                                <div class="hover-classify-one">
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">淘宝海报</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">主图|直通车</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">淘宝首页</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">淘宝详情页</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">淘宝手机端模板</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">节日活动</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">综合模板</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">背景</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">元素</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item-diff" href="javascript:;"
+                                        >更多&gt;&gt;</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="javascript:;" data-spot="多媒体">多媒体</a>
+                            <div class="nav-hover-banner">
+                                <div class="opacity-block"></div>
+                                <div class="hover-classify-two">
+                                    <div class="classify-two-wrap"><a href="javascript:;" class="classify-two-SP">视频</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">AE模板</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">会声会影</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">宣传片</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">实拍视频</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">背景视频</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="classify-two-wrap"><a href="javascript:;">音效</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">广告设计</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">影视音效</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">游戏音效</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">语言音效</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">动画音效</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="classify-two-wrap"><a href="javascript:;">配乐</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">影视配乐</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">游戏配乐</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">广告配乐</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">宣传片配乐</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">节日配乐</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item"><a href="javascript:;" class="nav-ppt"></a><a
+                                href="javascript:;" data-spot="办公文档">办公文档</a>
+                            <div class="nav-hover-banner">
+                                <div class="opacity-block"></div>
+                                <div class="hover-classify-two">
+                                    <div class="classify-two-wrap"><a href="javascript:;" class="classify-two-PPT">PPT模板</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">工作汇报</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">计划总结</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">企业介绍</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">商业计划书</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">产品发布</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="classify-two-wrap"><a href="javascript:;">Excel模板</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">人事</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">行政</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">财务</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">销售/采购</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">运营/客服</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="classify-two-wrap"><a href="javascript:;">Word模板</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">简历</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">通用</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">人事</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">行政</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">运营</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;"
+                                data-spot="装饰装修">装饰装修</a>
+                            <div class="nav-hover-banner">
+                                <div class="hover-classify-one">
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">背景墙</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">装饰画</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">玄关</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">CAD图库</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item" href="javascript:;">模型库</a></div>
+                                    <div class="classify-item-wrap"><a class="classify-one-item-diff" href="javascript:;"
+                                        >更多&gt;&gt;</a></div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a href="javascript:;"
+                                data-spot="插画配图">插画配图</a>
+                            <div class="nav-hover-banner">
+                                <div class="opacity-block"></div>
+                                <div class="hover-classify-two">
+                                    <div class="classify-two-wrap"><a href="javascript:;" class="classify-two-CH">插画</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">情感表达</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">节日节气</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">教育文化</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">风光建筑</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">生活方式</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">商务办公</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">社会民生</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">科技概念</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                    <div class="classify-two-wrap"><a href="javascript:;">配图</a>
+                                        <ul class="classify-two-ul">
+                                            <li class="classify-two-ul-li"><a href="javascript:;">手机海报</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">微信公众号用图</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">创意图片</a></li>
+                                            <li class="classify-two-ul-li"><a href="javascript:;">其他</a></li>
+                                            <li class="margin-sm"><a href="javascript:;">更多&gt;&gt;</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="nav-item nav-item-more"><a rel="nofollow" href="javascript:;" class="new-news">…</a>
+                            <div class="nav-hover-banner">
+                                <div class="more-item"><a href="javascript:;"><span class="new-news">包图海外</span></a>
+                                    <div class="hoverline-wrap"><i class="hoverline"></i></div>
+                                </div>
+                                <div class="more-item"><a href="javascript:;" data-spot="热门活动"><span>热门活动</span></a>
+                                    <div class="hoverline-wrap"><i class="hoverline"></i></div>
+                                </div>
+                                <div class="more-item"><a href="javascript:;" data-spot="设计趋势"><span>设计趋势</span></a>
+                                    <div class="hoverline-wrap"><i class="hoverline"></i></div>
+                                </div>
+                                <div class="more-item"><a href="javascript:;" data-spot="软件教程"><span
+                                            class="rjjc new-news">软件教程</span></a>
+                                    <div class="hoverline-wrap"><i class="hoverline"></i></div>
+                                </div>
+                            </div>
+                        </li> -->
+                    </ul>
+                </nav>
+                <div class="hoverLine-wrap"><i class="hoverLine" style="left: 473.578px; width: 0px; opacity: 1;"></i></div>
+            </div>
+        </div>
+        <!--主体内容-->
+        <div class="main-body">
+            <!--素材列表-->
+            <div class="bt-list ad-list">
+                <ul class="clearfix sucai_list">
+                    <!-- <li>
+                        <a href="javascript:;">
+                            <img class="scrollLoading" alt="简约寒露24节气海报图片" src="https://pic.ibaotu.com/01/00/75/78M888piCD68.jpg-0.jpg!w340"></a>
+                        <div class="hover-pop">
+                            <a seo-url="javascript:;" class="jump-details jump-details-seo"></a>
+                            <div class="pop-tit gradient-ver-wb clearfix">
+                                <a href="https://ibaotu.com/sucai/970775.html"
+                                    class="tit-name">简约寒露24节气海报</a>
+                            </div>
+                            <div class="pop-bot gradient-ver-bw ">
+                                <a href="https://ibaotu.com/?m=download&amp;id=970775" class="down-btn gradient-hor-og"> 下载PSD </a>
+                            </div>
+                        </div>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <img class="bg-blur" src=""/>
+    <script src="https://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+    <script src="https://www.jq22.com/demo/testImg201807311236/js/jquery.rotate.min.js"></script>
+    <script src="index.js"></script>
+    <script>
+        $(function () {
+            function getData(type){
+                var _url = 'https://'+type+'-1257779621.cos.ap-guangzhou.myqcloud.com/'
+                $.ajax({
+                    url: _url,
+                    type: 'get',
+                    data: {},
+                    dataType: 'xml',
+                    success: function (res) {
+
+                        var dom = $(res).find('Key')
+                        var imgArr = []
+                        dom.map((index, item) => {
+                            imgArr.push([
+                                '<li>',
+                                '    <a class="img-outer" data-src="' + _url + item.innerHTML + '"  href="javascript:;">',
+                                '        <img class="scrollLoading" data-src="' + _url + item.innerHTML + '" alt="'+item.innerHTML.split('.')[0]+'" src="' + _url + item.innerHTML + '"></a>',
+                                '    <div class="hover-pop">',
+                                '        <a seo-url="javascript:;" class="jump-details jump-details-seo"></a>',
+                                '        <div class="pop-tit gradient-ver-wb clearfix">',
+                                '            <a href="javascript:;" class="tit-name">'+item.innerHTML.split('.')[0]+'</a>',
+                                '        </div>',
+                                '        <div class="pop-bot gradient-ver-bw ">',
+                                '            <a href="' + _url + item.innerHTML + '" download="'+item.innerHTML.split('.')[0]+'" class="down-btn gradient-hor-og"> 下载原图 </a>',
+                                '        </div>',
+                                '    </div>',
+                                '</li>',
+                            ].join(''))
+                        })
+                        $('.sucai_list').html('')
+                        $('.sucai_list').append(imgArr.join(''))
+                        $('.img-outer').Magnify({
+                            Toolbar: [
+                                'prev',
+                                'next',
+                                'rotateLeft',
+                                'rotateRight',
+                                'zoomIn',
+                                'actualSize',
+                                'zoomOut',
+                                'fullScreen'
+                            ],
+                            keyboard: true,
+                            draggable: false,
+                            movable: true,
+                            modalSize: [800, 600],
+                            beforeOpen: function (obj, data) {
+                                console.log('beforeOpen')
+                                $('body').css('overflow','hidden')
+                            },
+                            opened: function (obj, data) {
+                                console.log('opened')
+                            },
+                            beforeClose: function (obj, data) {
+                                $('body').css('overflow','auto')
+                                console.log('beforeClose')
+                            },
+                            closed: function (obj, data) {
+                                console.log('closed')
+                            },
+                            beforeChange: function (obj, data) {
+                                console.log('beforeChange')
+                            },
+                            changed: function (obj, data) {
+                                console.log('changed')
+                            }
+                        });
+                        setTimeout(function(){
+
+                            $('.scrollLoading').each(function(){
+                                var $this = $(this)
+                                if($this.height() > ($this.parents('li').height()*2)) {
+                                    $this.parents('.img-outer').addClass('heigher')
+                                }
+                            })
+                        },1000)
+
+                    },
+                    error: function (err) {
+                        console.log('错误', err)
+                    }
+                })
+            }
+            getData('kaiji')
+            $('.nav-item').on('click', function(){
+                var $this = $(this)
+                if($this.find('a').hasClass('active')) return false
+                var type = $this.data('type')
+                $this.siblings('li').find('a').removeClass('active')
+                $this.find('a').addClass('active')
+                getData(type)
+            })
+            
+            $('body').on('mouseup', '.sucai_list li',
+            function() {
+                var $this = $(this).find('.img-outer')
+                var type = $this.data('src')
+                var blur = $('.bg-blur')
+                    blur.attr('src',type)
+            })
+        })
+    </script>
+</body>
+
+</html>

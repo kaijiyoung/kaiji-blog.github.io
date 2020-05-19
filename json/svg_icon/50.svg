@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="83px" viewBox="0 0 53 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_size_4_selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M5,10 L42,10 C43.1045695,10 44,10.8954305 44,12 L44,60 C44,61.1045695 43.1045695,62 42,62 L5,62 C3.8954305,62 3,61.1045695 3,60 L3,12 C3,10.8954305 3.8954305,10 5,10 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/快件规格/行李箱">
+            <g id="icon_size_4_selected">
+                <rect id="Rectangle-5" fill="#333333" x="0" y="0" width="53" height="83" rx="4"></rect>
+                <g id="icon/快件规格/行李箱" transform="translate(3.000000, 15.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <path stroke="#FFFFFF" stroke-width="1.6" d="M5,10.8 C4.3372583,10.8 3.8,11.3372583 3.8,12 L3.8,60 C3.8,60.6627417 4.3372583,61.2 5,61.2 L42,61.2 C42.6627417,61.2 43.2,60.6627417 43.2,60 L43.2,12 C43.2,11.3372583 42.6627417,10.8 42,10.8 L5,10.8 Z"></path>
+                    <circle id="Oval-9" stroke="#FFFFFF" stroke-width="1.6" mask="url(#mask-2)" cx="6" cy="13" r="5.2"></circle>
+                    <circle id="Oval-9-Copy" stroke="#FFFFFF" stroke-width="1.6" mask="url(#mask-2)" cx="41" cy="13" r="5.2"></circle>
+                    <circle id="Oval" stroke="#FFFFFF" stroke-width="1.6" fill="#333333" cx="4.39772727" cy="63" r="3.2"></circle>
+                    <circle id="Oval-Copy" stroke="#FFFFFF" stroke-width="1.6" fill="#333333" cx="42.6" cy="63" r="3.2"></circle>
+                    <path d="M39.2,19.0470796 L7.8,19.1478993 L7.8,56 C7.8,56.1104569 7.88954305,56.2 8,56.2 L39,56.2 C39.1104569,56.2 39.2,56.1104569 39.2,56 L39.2,19.0470796 Z" id="Rectangle-Copy" stroke="#FFFFFF" stroke-width="1.6" fill-rule="nonzero"></path>
+                    <path d="" id="Path" stroke="#333333" stroke-width="1.6" fill-rule="nonzero"></path>
+                    <polygon id="Rectangle-2" fill="#FFFFFF" points="10 15 37 15 37 16.6 10 16.6"></polygon>
+                    <path d="M16.8,10.8 L30.2,10.8 L30.2,2 C30.2,1.3372583 29.6627417,0.8 29,0.8 L18,0.8 C17.3372583,0.8 16.8,1.3372583 16.8,2 L16.8,10.8 Z" id="Combined-Shape-Copy" stroke="#FFFFFF" stroke-width="1.6"></path>
+                    <rect id="Rectangle-28-Copy-4" fill="#FFFFFF" transform="translate(23.500000, 3.300000) rotate(90.000000) translate(-23.500000, -3.300000) " x="22.7" y="-4.2" width="1.6" height="15" rx="0.8"></rect>
+                    <rect id="Rectangle-26-Copy-3" fill="#FFFFFF" x="14" y="26" width="1.6" height="20" rx="0.8"></rect>
+                    <rect id="Rectangle-26-Copy-5" fill="#FFFFFF" x="23" y="26" width="1.6" height="20" rx="0.8"></rect>
+                    <rect id="Rectangle-26-Copy-4" fill="#FFFFFF" x="31.4" y="26" width="1.6" height="20" rx="0.8"></rect>
+                    <path d="M38.5,35 L49.9,35 L49.9,34.2 C49.9,33.5372583 49.3627417,33 48.7,33 L39.7,33 C39.0372583,33 38.5,33.5372583 38.5,34.2 L38.5,35 Z" id="Combined-Shape-Copy-2" stroke="#FFFFFF" stroke-width="1.6" transform="translate(44.200000, 34.000000) rotate(90.000000) translate(-44.200000, -34.000000) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

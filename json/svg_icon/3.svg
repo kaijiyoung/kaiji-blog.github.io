@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_cancel_red</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12,2 C6.48,2 2,6.48 2,12 C2,17.52 6.48,22 12,22 C17.52,22 22,17.52 22,12 C22,6.48 17.52,2 12,2 Z M4,12 C4,7.58 7.58,4 12,4 C13.85,4 15.55,4.63 16.9,5.69 L5.69,16.9 C4.63,15.55 4,13.85 4,12 Z M12,20 C10.15,20 8.45,19.37 7.1,18.31 L18.31,7.1 C19.37,8.45 20,10.15 20,12 C20,16.42 16.42,20 12,20 Z" id="path-1"></path>
+    </defs>
+    <g id="保留" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="寄件/上门取件/大陆件/普通物品/5完善信息首页_增值服务1-copy" transform="translate(-45.000000, -530.000000)">
+            <g id="Group" transform="translate(45.000000, 530.000000)">
+                <g id="icon/content/block_24px">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <g fill-rule="nonzero"></g>
+                    <g id="✱-/-Color-/-Icons-/-red-/-active" mask="url(#mask-2)" fill="#DC1E32" fill-rule="evenodd">
+                        <g transform="translate(-53.000000, -62.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="101" height="101"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

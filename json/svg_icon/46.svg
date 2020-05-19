@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="53px" height="83px" viewBox="0 0 53 83" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_size_2_selected</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/快件规格/小纸箱_selected">
+            <g id="icon_size_2_selected">
+                <rect id="Rectangle-5" fill="#333333" x="0" y="0" width="53" height="83" rx="4"></rect>
+                <g id="icon/快件规格/小纸箱_selected" transform="translate(10.000000, 48.000000)">
+                    <path d="M0,6 L33,6" id="Stroke-1" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path>
+                    <rect id="Rectangle-26-Copy-3" fill="#FFFFFF" x="9.42857143" y="12.375" width="14.1428571" height="1.65" rx="0.825"></rect>
+                    <polygon id="Stroke-3" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" points="33 33 0 33 0 6 6.6 0 26.4 0 33 6"></polygon>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

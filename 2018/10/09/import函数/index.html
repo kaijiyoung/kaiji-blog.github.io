@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="import()函数简介import命令会被 JavaScript 引擎静态分析，先于模块内的其他模块执行（叫做”连接“更合适）。所以，下面的代码会报错。1234// 报错if (x === 2) &amp;#123;    import MyModual from &apos;./myModual&apos;;&amp;#125; 上面代码中，引擎处理import语句是在编译时，这时不会去分析或执行if语句，所以import语句放">
+<meta property="og:type" content="article">
+<meta property="og:title" content="（转）import函数">
+<meta property="og:url" content="http://obyee.com/2018/10/09/import函数/index.html">
+<meta property="og:site_name" content="开积的个人博客">
+<meta property="og:description" content="import()函数简介import命令会被 JavaScript 引擎静态分析，先于模块内的其他模块执行（叫做”连接“更合适）。所以，下面的代码会报错。1234// 报错if (x === 2) &amp;#123;    import MyModual from &apos;./myModual&apos;;&amp;#125; 上面代码中，引擎处理import语句是在编译时，这时不会去分析或执行if语句，所以import语句放">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2020-05-19T04:44:01.644Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="（转）import函数">
+<meta name="twitter:description" content="import()函数简介import命令会被 JavaScript 引擎静态分析，先于模块内的其他模块执行（叫做”连接“更合适）。所以，下面的代码会报错。1234// 报错if (x === 2) &amp;#123;    import MyModual from &apos;./myModual&apos;;&amp;#125; 上面代码中，引擎处理import语句是在编译时，这时不会去分析或执行if语句，所以import语句放">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://obyee.com/2018/10/09/import函数/"/>
+
+
+
+
+
+  <title>（转）import函数 | 开积的个人博客</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a target="_blank" href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">开积的个人博客</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a target="_blank" href="/" rel="section">
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-我大哥">
+          <a target="_blank" href="http://kaiji.obyee.com" rel="section">
+            
+            我大哥
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-印记中文">
+          <a target="_blank" href="https://docschina.org/" rel="section">
+            
+            印记中文
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue中文文档">
+          <a target="_blank" href="https://vue.docschina.org/v2/api" rel="section">
+            
+            vue中文文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue-router中文文档">
+          <a target="_blank" href="https://router.vuejs.org/zh/api/" rel="section">
+            
+            vue-router中文文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vuex中文文档">
+          <a target="_blank" href="https://vuex.vuejs.org/zh/guide/" rel="section">
+            
+            vuex中文文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-webpack中文文档">
+          <a target="_blank" href="https://webpack.docschina.org/concepts/" rel="section">
+            
+            webpack中文文档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-vue-风格指南">
+          <a target="_blank" href="https://vue.docschina.org/v2/style-guide/" rel="section">
+            
+            Vue 风格指南
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://obyee.com/2018/10/09/import函数/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="kaiji">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="开积的个人博客">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">（转）import函数</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-09T20:46:37+08:00">
+                2018-10-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="import-函数"><a href="#import-函数" class="headerlink" title="import()函数"></a>import()函数</h2><h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p><code>import</code>命令会被 JavaScript 引擎静态分析，先于模块内的其他模块执行（叫做”<code>连接</code>“更合适）。所以，下面的代码会报错。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 报错</span></span><br><span class="line"><span class="keyword">if</span> (x === <span class="number">2</span>) &#123;</span><br><span class="line">    <span class="keyword">import</span> MyModual <span class="keyword">from</span> <span class="string">'./myModual'</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，引擎处理<code>import</code>语句是在编译时，这时不会去分析或执行if语句，所以<code>import</code>语句放在if代码块之中毫无意义，因此会报句法错误，而不是执行时错误。也就是说，<code>import</code>和<code>export</code>命令只能在模块的顶层，不能在代码块之中（比如，在if代码块之中，或在函数之中）。</p>
+<p>这样的设计，固然有利于编译器提高效率，但也导致无法在运行时加载模块。在语法上，条件加载就不可能实现。如果<code>import</code>命令要取代 <code>Node</code> 的<code>require</code>方法，这就形成了一个障碍。因为<code>require</code>是运行时加载模块，<code>import</code>命令无法取代<code>require</code>的动态加载功能。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="string">'./'</span> + fileName;</span><br><span class="line"><span class="keyword">const</span> myModual = <span class="built_in">require</span>(path);</span><br></pre></td></tr></table></figure></p>
+<p>上面的语句就是动态加载，<code>require</code>到底加载哪一个模块，只有运行时才知道。<code>import</code>语句做不到这一点。</p>
+<h3 id="因此，有一个提案，建议引入import-函数，完成动态加载。"><a href="#因此，有一个提案，建议引入import-函数，完成动态加载。" class="headerlink" title="因此，有一个提案，建议引入import()函数，完成动态加载。"></a>因此，有一个提案，建议引入import()函数，完成动态加载。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(specifier)</span><br></pre></td></tr></table></figure>
+<p>上面代码中，<code>import</code>函数的参数<code>specifier</code>，指定所要加载的模块的位置。<code>import</code>命令能够接受什么参数，<code>import()</code>函数就能接受什么参数，两者区别主要是后者为动态加载。</p>
+<h3 id="ES6-import-返回一个-Promise对象。下面是一个例子。"><a href="#ES6-import-返回一个-Promise对象。下面是一个例子。" class="headerlink" title="ES6 import()返回一个 Promise对象。下面是一个例子。"></a>ES6 <code>import()</code>返回一个 <code>Promise</code>对象。下面是一个例子。</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> main = <span class="built_in">document</span>.querySelector(<span class="string">'main'</span>);</span><br><span class="line"><span class="keyword">import</span>(<span class="string">`./section-modules/<span class="subst">$&#123;someVariable&#125;</span>.js`</span>)</span><br><span class="line">.then(<span class="function"><span class="params">module</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">module</span>.loadPageInto(main);</span><br><span class="line">&#125;)</span><br><span class="line">.catch(<span class="function"><span class="params">err</span> =&gt;</span> &#123;</span><br><span class="line">    main.textContent = err.message;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p><code>import()</code>函数可以用在任何地方，不仅仅是模块，非模块的脚本也可以使用。它是运行时执行，也就是说，什么时候运行到这一句，也会加载指定的模块。另外，<code>import()</code>函数与所加载的模块没有静态连接关系，这点也是与<code>import</code>语句不相同。</p>
+<h3 id="import-类似于-Node-的require方法，区别主要是前者是异步加载，后者是同步加载。"><a href="#import-类似于-Node-的require方法，区别主要是前者是异步加载，后者是同步加载。" class="headerlink" title="import()类似于 Node 的require方法，区别主要是前者是异步加载，后者是同步加载。"></a><code>import()</code>类似于 <code>Node</code> 的<code>require</code>方法，区别主要是前者是异步加载，后者是同步加载。</h3><h3 id="适用场合"><a href="#适用场合" class="headerlink" title="适用场合"></a>适用场合</h3><p>下面是<code>import()</code>的一些适用场合。</p>
+<h4 id="（1）按需加载。"><a href="#（1）按需加载。" class="headerlink" title="（1）按需加载。"></a>（1）按需加载。</h4><p>import()可以在需要的时候，再加载某个模块。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">button.addEventListener(<span class="string">'click'</span>, event =&gt; &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./dialogBox.js'</span>)</span><br><span class="line">    .then(<span class="function"><span class="params">dialogBox</span> =&gt;</span> &#123;</span><br><span class="line">        dialogBox.open();</span><br><span class="line">    &#125;)</span><br><span class="line">    .catch(<span class="function"><span class="params">error</span> =&gt;</span> &#123;</span><br><span class="line">        <span class="comment">/* Error handling */</span></span><br><span class="line">    &#125;)</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，<code>import()</code>方法放在<code>click</code>事件的监听函数之中，只有用户点击了按钮，才会加载这个模块。</p>
+<h4 id="（2）条件加载"><a href="#（2）条件加载" class="headerlink" title="（2）条件加载"></a>（2）条件加载</h4><p><code>import()</code>可以放在<code>if</code>代码块，根据不同的情况，加载不同的模块。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (condition) &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'moduleA'</span>).then(...);</span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'moduleB'</span>).then(...);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，如果满足条件，就加载模块 <strong>A</strong>，否则加载模块 <strong>B</strong>。</p>
+<h4 id="（3）动态的模块路径"><a href="#（3）动态的模块路径" class="headerlink" title="（3）动态的模块路径"></a>（3）动态的模块路径</h4><p><code>import()</code>允许模块路径动态生成。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(f())</span><br><span class="line">.then(...);</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，根据函数<code>f</code>的返回结果，加载不同的模块。</p>
+<h2 id="注意"><a href="#注意" class="headerlink" title="注意:"></a>注意:</h2><p><code>import()</code>加载模块成功以后，这个模块会作为一个对象，当作<code>then</code>方法的参数。因此，可以使用<strong>对象解构赋值</strong>的语法，获取输出接口。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">'./myModule.js'</span>)</span><br><span class="line">.then(<span class="function">(<span class="params">&#123;export1, export2&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">// ...·</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>上面代码中，<code>export1</code>和<code>export2</code>都是<code>myModule.js</code>的输出接口，可以解构获得。</p>
+<h4 id="如果模块有default输出接口，可以用参数直接获得。"><a href="#如果模块有default输出接口，可以用参数直接获得。" class="headerlink" title="如果模块有default输出接口，可以用参数直接获得。"></a>如果模块有<code>default</code>输出接口，可以用参数直接获得。</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">'./myModule.js'</span>)</span><br><span class="line">.then(<span class="function"><span class="params">myModule</span> =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(myModule.default);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>上面的代码也可以使用具名输入的形式。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span>(<span class="string">'./myModule.js'</span>)</span><br><span class="line">.then(<span class="function">(<span class="params">&#123;<span class="keyword">default</span>: theDefault&#125;</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="built_in">console</span>.log(theDefault);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>如果想同时加载<strong>多个</strong>模块，可以采用下面的写法。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">Promise</span>.all([</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./module1.js'</span>),</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./module2.js'</span>),</span><br><span class="line">    <span class="keyword">import</span>(<span class="string">'./module3.js'</span>),</span><br><span class="line">])</span><br><span class="line">.then(<span class="function">(<span class="params">[module1, module2, module3]</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="comment">//···</span></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p><code>import()</code>也可以用在<code>async</code>函数之中。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">async</span> <span class="function"><span class="keyword">function</span> <span class="title">main</span>(<span class="params"></span>) </span>&#123;</span><br><span class="line">    <span class="keyword">const</span> myModule = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">'./myModule.js'</span>);</span><br><span class="line">    <span class="keyword">const</span> &#123;export1, export2&#125; = <span class="keyword">await</span> <span class="keyword">import</span>(<span class="string">'./myModule.js'</span>);</span><br><span class="line">    <span class="keyword">const</span> [module1, module2, module3] = <span class="keyword">await</span> <span class="built_in">Promise</span>.all([</span><br><span class="line">        <span class="keyword">import</span>(<span class="string">'./module1.js'</span>),</span><br><span class="line">        <span class="keyword">import</span>(<span class="string">'./module2.js'</span>),</span><br><span class="line">        <span class="keyword">import</span>(<span class="string">'./module3.js'</span>),</span><br><span class="line">    ]);</span><br><span class="line">&#125;</span><br><span class="line">main();</span><br></pre></td></tr></table></figure></p>
+<p>（完）<br>转自：<a href="https://blog.csdn.net/ixygj197875/article/details/79263912" target="_blank" rel="noopener">https://blog.csdn.net/ixygj197875/article/details/79263912</a><br>转自：<a href="http://www.waibo.wang/bible/es6/html/22/22.10.html" target="_blank" rel="noopener">http://www.waibo.wang/bible/es6/html/22/22.10.html</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/08/31/抽奖程序实现逻辑/" rel="next" title="抽奖程序实现逻辑">
+                <i class="fa fa-chevron-left"></i> 抽奖程序实现逻辑
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/10/10/自定义页面/" rel="prev" title="hexo自定义解析">
+                hexo自定义解析 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">kaiji</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">1</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+            <div class="links-of-author motion-element">
+                
+                  <span class="links-of-author-item">
+                    <a href="https://github.com/kaijiyoung" target="_blank" title="GitHub">
+                      GitHub</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.liunwcj.cn/" target="_blank" title="一灰（导师）">
+                      一灰（导师）</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.aniublog.com" target="_blank" title="阿牛博客">
+                      阿牛博客</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.ydcss.com" target="_blank" title="ydcss">
+                      ydcss</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.myboolke.com" target="_blank" title="X-Xiaosu">
+                      X-Xiaosu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.i--do.com" target="_blank" title="CASTLE">
+                      CASTLE</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://f2er.club/" target="_blank" title="醉牛前端">
+                      醉牛前端</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://ideazhao.com/" target="_blank" title="灵感_idea">
+                      灵感_idea</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://g8up.cn/" target="_blank" title="好奇实验室">
+                      好奇实验室</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://fed.renren.com" target="_blank" title="人人网FED">
+                      人人网FED</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.doyoe.com" target="_blank" title="杜瑶的世界 Joy's World">
+                      杜瑶的世界 Joy's World</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://uikoo9.com/" target="_blank" title="uikoo9.com">
+                      uikoo9.com</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://t1bao.com/" target="_blank" title="田一块全栈">
+                      田一块全栈</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://fangyexu.com/" target="_blank" title="Fangye Xu">
+                      Fangye Xu</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.runoob.com/" target="_blank" title="菜鸟教程">
+                      菜鸟教程</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.runoob.com/svg/svg-reference.html" target="_blank" title="svg参考手册">
+                      svg参考手册</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.w3school.com.cn/" target="_blank" title="w3school">
+                      w3school</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://123.kfd.me/" target="_blank" title="123.kfd.me">
+                      123.kfd.me</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://jk.js.org/" target="_blank" title="江矿先生的博客">
+                      江矿先生的博客</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://docschina.org/" target="_blank" title="印记中文 - 深入挖掘国外前端新领域，为中国 Web 前端开发人员提供优质文档！">
+                      印记中文 - 深入挖掘国外前端新领域，为中国 Web 前端开发人员提供优质文档！</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.chsi.com" target="_blank" title="学信网">
+                      学信网</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.css88.com/book/css/" target="_blank" title="css3参考手册">
+                      css3参考手册</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://tool.chinaz.com/regex/" target="_blank" title="正则表达式在线测试 - 站长工具">
+                      正则表达式在线测试 - 站长工具</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.jq22.com/chm/jquery1.8.3/regexp.html" target="_blank" title="正则表达式速查表">
+                      正则表达式速查表</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="http://www.foolo.cn/" target="_blank" title="设计师导航">
+                      设计师导航</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://console.cloud.tencent.com/" target="_blank" title="腾讯云">
+                      腾讯云</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.json.cn/" target="_blank" title="json在线解析">
+                      json在线解析</a>
+                  </span>
+                
+                  <span class="links-of-author-item">
+                    <a href="https://www.dodoblog.cn/" target="_blank" title="小寒的博客">
+                      小寒的博客</a>
+                  </span>
+                
+            </div>
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#import-函数"><span class="nav-number">1.</span> <span class="nav-text">import()函数</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#简介"><span class="nav-number">1.1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#因此，有一个提案，建议引入import-函数，完成动态加载。"><span class="nav-number">1.2.</span> <span class="nav-text">因此，有一个提案，建议引入import()函数，完成动态加载。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ES6-import-返回一个-Promise对象。下面是一个例子。"><span class="nav-number">1.3.</span> <span class="nav-text">ES6 import()返回一个 Promise对象。下面是一个例子。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#import-类似于-Node-的require方法，区别主要是前者是异步加载，后者是同步加载。"><span class="nav-number">1.4.</span> <span class="nav-text">import()类似于 Node 的require方法，区别主要是前者是异步加载，后者是同步加载。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#适用场合"><span class="nav-number">1.5.</span> <span class="nav-text">适用场合</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#（1）按需加载。"><span class="nav-number">1.5.1.</span> <span class="nav-text">（1）按需加载。</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（2）条件加载"><span class="nav-number">1.5.2.</span> <span class="nav-text">（2）条件加载</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#（3）动态的模块路径"><span class="nav-number">1.5.3.</span> <span class="nav-text">（3）动态的模块路径</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#注意"><span class="nav-number">2.</span> <span class="nav-text">注意:</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#如果模块有default输出接口，可以用参数直接获得。"><span class="nav-number">2.0.1.</span> <span class="nav-text">如果模块有default输出接口，可以用参数直接获得。</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">kaiji</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+<span class="post-meta-divider">|</span>
+<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=45010702000075" target="_blank">桂公网安备45010702000075号</a>
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+  <div id="listen" style="display:block;">
+        <div class="player">
+            <div class="box">
+                <img src="https://p3.music.126.net/CI_u3SfBgdTIAQtFnn_wnQ==/6040716883009850.jpg?param=300y300"
+                    width="80" height="80" class="cover pull-left">
+                <div class="info pull-left">
+                    <h4 class="title nowrap">开积的个人博客</h4>
+                    <ul class="items control icon">
+                        <li class="item"><span class="rewind"></span></li>
+                        <li class="item" style="position:relative">
+                            <span class="play" style="position:relative;z-index:3"></span>
+                            <svg style="position:absolute;top:-11px;left:-9px;transform: rotate(-90deg);" width="43px" height="43px" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="21px" cy="21px" r="18px" stroke-width="3" stroke="#555" fill="none" class="circle" stroke-dasharray="113px 113px"></circle>
+                                <circle id="progress" cx="21px" cy="21px" r="18px" stroke-width="3" stroke="#48aeff" fill="none" class="circle" stroke-dasharray="0px 113px"></circle>
+                            </svg>
+                        </li>
+                        <li class="item"><span class="fastforward"></span></li>
+                        <li class="item"><span class="onlist"></span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="list">
+                <form method="get" class="music-search" action="" role="search">
+                    <span class="icon search-icon"></span>
+                    <input type="text" name="song" id="song-msg" class="textinput" placeholder="回车搜索..."
+                        required="required">
+                    <input type="hidden" name="page" id="list-page" value="1">
+                    <div class="search-source">
+                        <span id="onsource" class="icon">♬☚</span>
+                    </div>
+                    <div class="source-items">
+                        <label><input type="radio" name="source" class="source checkbox-radio"
+                                value="netease" checked="checked"><span class="radioinput"></span>网易</label>
+                        <label><input type="radio" name="source" class="source checkbox-radio"
+                                value="tencent"><span class="radioinput"></span>QQ</label>
+                        <label><input type="radio" name="source" class="source checkbox-radio"
+                                value="xiami"><span class="radioinput"></span>虾米</label>
+                        <label><input type="radio" name="source" class="source checkbox-radio"
+                                value="kugou"><span class="radioinput"></span>酷狗</label>
+                        <label><input type="radio" name="source" class="source checkbox-radio"
+                                value="baidu"><span class="radioinput"></span>百度</label>
+                    </div>
+                </form>
+                <ul id="playlist" class="items"></ul>
+                <div class="list-page-btn">
+                    <a href="javascript:;" id="list-previous">上一页</a>
+                    <a href="javascript:;" id="list-next">下一页</a>
+                </div>
+            </div>
+            <audio class="bgm" type="audio/mpeg"></audio>
+        </div>
+    </div><!-- #listen -->
+    <div id="icon" class="icon-voice">
+        <svg class="outline-voice" viewBox="0 0 216 216" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient x1="16.291%" y1="13.917%" x2="88.893%" y2="80.425%" id="a">
+                    <stop stop-color="#0AA3C9" offset="0%"></stop>
+                    <stop stop-color="#0AA3C9" offset="100%"></stop>
+                </linearGradient>
+            </defs>
+            <g fill="none" fill-rule="evenodd">
+                <path d="M10 108c0-54.124 43.876-98 98-98s98 43.876 98 98-43.876 98-98 98-98-43.876-98-98z" stroke="rgba(0,0,0,.1)"
+                    stroke-width="8"></path>
+                <path id="path" class="path-voice" d="M10 108c0-54.124 43.876-98 98-98s98 43.876 98 98-43.876 98-98 98-98-43.876-98-98z"
+                    stroke="url(#a)" stroke-width="12" style="stroke-dashoffset: 427.934px;"></path>
+            </g>
+        </svg>
+        <div class="wheel-voice">
+            <div id="indicator" class="indicator" style="transform: matrix3d(-0.36686, 0.93026, 0, 0, -0.93026, -0.36686, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1); user-select: none; touch-action: none;"></div>
+        </div>
+    </div>
+<script type="text/javascript" src="http://www.myheyufei.com/?action=music_list_get"></script>
+<script src="js/src/js/TweenLite.min.js"></script>
+<script src="js/src/js/Draggable.min.js"></script>
+<script src="js/src/js/CSSPlugin.min.js"></script>
+<script src="js/src/js/index.js"></script>
+
+<script src="/live2dw/lib/L2Dwidget.min.js?0c58a1486de42ac6cc1c59c7d98ae887"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/miku.model.json"},"display":{"position":"left","width":120,"height":240},"mobile":{"show":true},"log":false});</script></body>
+</html>

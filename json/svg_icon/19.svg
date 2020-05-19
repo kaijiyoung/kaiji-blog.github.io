@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_content_file_selected2</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M12.955236,1.2 C13.16763,1.18652885 13.388714,1.25734318 13.5656854,1.43431458 L19.5656854,7.43431458 C19.7426568,7.61128597 19.8134711,7.83237 19.8,8.04476397 L19.8,19.9941413 C19.8,21.5420694 18.55014,22.8 17.0081158,22.8 L5.99188419,22.8 C4.45201803,22.8 3.2,21.5456694 3.2,20.0092049 L3.2,3.99079514 C3.2,2.44933766 4.45416882,1.2 5.9973917,1.2 L12.955236,1.2 Z M18.2,8.8 L13,8.8 C12.5581722,8.8 12.2,8.4418278 12.2,8 L12.2,2.8 L5.9973917,2.8 C5.33644501,2.8 4.8,3.33437858 4.8,3.99079514 L4.8,20.0092049 C4.8,20.6626741 5.33633526,21.2 5.99188419,21.2 L17.0081158,21.2 C17.6641709,21.2 18.2,20.6607109 18.2,19.9941413 L18.2,8.8 Z M13.8,3.93137085 L13.8,7.2 L17.0686292,7.2 L13.8,3.93137085 Z M8,13.8 C7.5581722,13.8 7.2,13.4418278 7.2,13 C7.2,12.5581722 7.5581722,12.2 8,12.2 L15,12.2 C15.4418278,12.2 15.8,12.5581722 15.8,13 C15.8,13.4418278 15.4418278,13.8 15,13.8 L8,13.8 Z M8,17.8 C7.5581722,17.8 7.2,17.4418278 7.2,17 C7.2,16.5581722 7.5581722,16.2 8,16.2 L13,16.2 C13.4418278,16.2 13.8,16.5581722 13.8,17 C13.8,17.4418278 13.4418278,17.8 13,17.8 L8,17.8 Z" id="path-1"></path>
+    </defs>
+    <g id="保留" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="寄件/上门取件/大陆件/同城/3信息填写_弹框1-copy" transform="translate(-61.000000, -330.000000)">
+            <g id="Group-3-Copy" transform="translate(61.000000, 330.000000)">
+                <g id="icon/content/file_24px">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="✱-/-Color-/-Icons-/-Black-/-white" mask="url(#mask-2)" fill="#FFFFFF" fill-rule="evenodd">
+                        <g transform="translate(-36.000000, -34.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="101" height="101"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

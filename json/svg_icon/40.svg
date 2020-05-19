@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_payment_2_selected</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M1.8,11.2 L22.2,11.2 L22.2,8.8 L1.8,8.8 L1.8,11.2 Z M1.8,12.8 L1.8,18 C1.8,18.6621722 2.3378278,19.2 3,19.2 L21,19.2 C21.6621722,19.2 22.2,18.6621722 22.2,18 L22.2,12.8 L1.8,12.8 Z M1.8,7.2 L22.2,7.2 L22.2,6 C22.2,5.3378278 21.6621722,4.8 21,4.8 L3,4.8 C2.3378278,4.8 1.8,5.3378278 1.8,6 L1.8,7.2 Z M21,20.8 L3,20.8 C1.4541722,20.8 0.2,19.5458278 0.2,18 L0.2,6 C0.2,4.4541722 1.4541722,3.2 3,3.2 L21,3.2 C22.5458278,3.2 23.8,4.4541722 23.8,6 L23.8,18 C23.8,19.5458278 22.5458278,20.8 21,20.8 Z M4.2,16.8 L4.2,15.2 L10.8,15.2 L10.8,16.8 L4.2,16.8 Z M17.2,16.8 L17.2,15.2 L19.8,15.2 L19.8,16.8 L17.2,16.8 Z" id="path-1"></path>
+    </defs>
+    <g id="保留" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="寄件/上门取件/大陆件/普通物品/5完善信息首页_付款方式-copy" transform="translate(-188.000000, -483.000000)">
+            <g id="Group-4" transform="translate(188.000000, 483.000000)">
+                <g id="icon/content/寄付月结_24px">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="Combined-Shape" fill="#444444" fill-rule="nonzero" xlink:href="#path-1"></use>
+                    <g id="✱-/-Color-/-Icons-/-Black-/-dark" mask="url(#mask-2)" fill="#1C1C1C" fill-rule="evenodd">
+                        <g transform="translate(-36.000000, -36.000000)" id="Rectangle">
+                            <rect x="0" y="0" width="101" height="101"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

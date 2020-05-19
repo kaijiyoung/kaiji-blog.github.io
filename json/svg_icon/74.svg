@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_清空整页内容</title>
+    <desc>Created with Sketch.</desc>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
+        <g id="icon/content/refresh_24px" stroke="#333333" stroke-width="1.4">
+            <g id="refresh-1" transform="translate(6.000000, 6.000000)">
+                <path d="M11.6393892,8.05350581 C10.8007995,10.3558988 8.59239998,12 6,12 C2.6862915,12 0,9.3137085 0,6 C0,2.6862915 2.6862915,0 6,0 C8.09394639,0 9.93736332,1.07264411 11.0107531,2.6984346" id="Oval-18"></path>
+                <polyline id="Rectangle" points="11.4 0 11.4 3 8.4 3 8.4 3"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>

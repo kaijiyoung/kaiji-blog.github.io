@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="24px" height="24px" viewBox="0 0 24 24" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 52.1 (67048) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_default_setted</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M10.0001987,16.6795038 L5.98218139,18.7810285 C4.33233612,19.6439393 2.90620676,18.6110736 3.22220022,16.7781727 L3.98850136,12.3332894 L0.741533554,9.1845677 C-0.597818427,7.88574154 -0.049252687,6.21151732 1.79543387,5.94484826 L6.28650999,5.29561545 L8.29412539,1.24867881 C9.12046748,-0.417055632 10.880753,-0.4153967 11.7062721,1.24867881 L13.7138875,5.29561545 L18.2049636,5.94484826 C20.0514956,6.21178409 20.5968733,7.8870435 19.2588639,9.1845677 L16.0118961,12.3332894 L16.7781973,16.7781727 C17.0945071,18.6129088 15.6664192,19.6430804 14.0182161,18.7810285 L10.0001987,16.6795038 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="slot-btn/function/DefaultSetted" transform="translate(-16.000000, -1.000000)">
+            <g id="Group" transform="translate(18.000000, 3.000000)">
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <use id="Combined-Shape" fill="#000000" fill-rule="nonzero" xlink:href="#path-1"></use>
+                <g id="✱-/-Color-/-Icons-/-red-/-active" mask="url(#mask-2)" fill="#DC1E32">
+                    <g transform="translate(-2.000000, -2.000000)" id="Rectangle">
+                        <rect x="0" y="0" width="24" height="24"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
